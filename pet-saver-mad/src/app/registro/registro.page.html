@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons defaultHref="home" slot="start" text="atras">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>REGISTRO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="ion-padding">
+        <form>
+          <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            <ion-item>
+              <ion-label position="stacked">NOMBRES <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label position="stacked">APELLIDOS <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">CORREO ELECTRONICO <ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="stacked">CONTRASEÑA <ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="password"></ion-input>
+                </ion-item>
+    
+    
+    
+          
+          </ion-list>
+    
+          <div class="ion-padding">
+            <ion-button expand="block" type="submit" class="ion-no-margin">REGISTRARSE</ion-button>
+          </div>
+        </form>
+        </div>
+
+</ion-content>

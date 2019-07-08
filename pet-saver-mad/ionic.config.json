@@ -1,0 +1,7 @@
+{
+  "name": "pet-saver-mad",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
