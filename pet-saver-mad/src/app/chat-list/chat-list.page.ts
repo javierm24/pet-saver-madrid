@@ -11,5 +11,4 @@ export class ChatListPage implements OnInit {
 
   ngOnInit() {
 
-}
-}
+}}
