@@ -8,8 +8,23 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-button class="chat-list" color="primary" routerLink="/chat-list">Mensajes</ion-button>
+  <ion-button class="chat-list" color="warning" routerLink="/chat-list">Chat</ion-button>
+<ion-card>
+        
+        <ion-card-content>
+          <ion-list>
 
+            <ion-item>
+              <ion-label>MASCOTAS</ion-label>
+              <ion-select multiple="true">
+                <ion-select-option value="PERROS"> PERROS</ion-select-option>
+                <ion-select-option value="GATOS"> GATOS</ion-select-option>
+                <ion-select-option value="OTROS"> OTROS</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
 
 
 <!--
@@ -34,6 +49,7 @@
 -->
 
 <ion-content>
+ 
 
     <ion-app>
         <ion-header translucent>
@@ -115,3 +131,8 @@
         </ion-content>
  
       </ion-app>
+ 
+ </ion-content>
+
+
+
