@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>animal-list <ion-icon name="paw"></ion-icon></ion-title>
+    <ion-title>ESCOGE TU MASCOTA<ion-icon name="paw"></ion-icon>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-app>
+    <ion-content fullscreen>
+      <ion-card>
+        
+        <ion-card-content>
+          <ion-list>
+
+            <ion-item>
+              <ion-label>MASCOTAS</ion-label>
+              <ion-select multiple="true">
+                <ion-select-option value="PERROS"> PERROS</ion-select-option>
+                <ion-select-option value="GATOS"> GATOS</ion-select-option>
+                <ion-select-option value="OTROS"> OTROS</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+
+
 
 </ion-content>

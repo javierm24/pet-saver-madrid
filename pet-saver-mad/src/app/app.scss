@@ -4,3 +4,8 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+
+:root {
+    --ion-background-color:      #0F0F0F;
+    --ion-background-color-rgb:   15, 15, 15;
+  }
