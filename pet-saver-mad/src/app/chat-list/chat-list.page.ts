@@ -9,6 +9,7 @@ export class ChatListPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
 
+}
 }
