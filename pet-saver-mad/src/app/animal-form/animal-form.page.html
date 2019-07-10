@@ -1,10 +1,59 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>animal-form <ion-icon name="paw"></ion-icon></ion-title>
+    <ion-title>FORMULARIO<ion-icon name="paw"></ion-icon>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <div class="ion-padding">
+    <h1>Datos de la mascota</h1>
+    <form>
+
+      <ion-item>
+        <ion-label>TIPO DE MASCOTA</ion-label>
+        <ion-select multiple="false">
+          <ion-select-option value="PERROS"> PERRO</ion-select-option>
+          <ion-select-option value="GATOS"> GATO</ion-select-option>
+          <ion-select-option value="OTROS"> OTRO</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>SEXO</ion-label>
+        <ion-select multiple="false">
+          <ion-select-option value="PERROS"> HEMBRA</ion-select-option>
+          <ion-select-option value="GATOS"> MACHO</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">NOMBRE <ion-text color="danger"></ion-text>
+        </ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">EDAD <ion-text color="danger"></ion-text>
+        </ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">TAMAÑO <ion-text color="danger"></ion-text>
+        </ion-label>
+        <ion-input required type="text"></ion-input>
+      </ion-item>
+
+
+      <div class="ion-padding">
+        <ion-button color="dark" expand="block" type="submit" class="ion-no-margin">ENVIAR</ion-button>
+      </div>
+    </form>
+
+
+  </div>
 
 
 </ion-content>
