@@ -1,13 +1,20 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title>
-        Lista de chats <ion-icon name="paw"></ion-icon>
-      </ion-title>
+    <ion-buttons defaultHref="home" slot="start" text="atras">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>chat-list <ion-icon name="paw"></ion-icon>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
+    </ion-header>
     <ion-content fullscreen>
       <ion-list>
         <ion-list-header>
