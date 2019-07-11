@@ -1,5 +1,5 @@
  <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-buttons defaultHref="animal-list" slot="start" text="atras">
           <ion-back-button></ion-back-button>
           </ion-buttons>
@@ -8,6 +8,7 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
+  
 <ion-card>
         
         <ion-card-content>
@@ -55,7 +56,7 @@
         </ion-header>,
         <ion-content fullscreen>
           <ion-card>
-            <img src="../../assets/animal1.jpg" />
+            <img button="true" routerLink="/chat" src="../../assets/animal1.jpg" />
             <ion-card-header>
               <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
               <ion-card-title>PEPE</ion-card-title>
@@ -66,7 +67,7 @@
           </ion-card>
  
           <ion-card>
-              <img src="../../assets/animal2.jpg" />
+              <img button="true" routerLink="/chat" src="../../assets/animal2.jpg" />
               <ion-card-header>
                 <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
                 <ion-card-title>PEPE</ion-card-title>
@@ -78,7 +79,7 @@
 
 
             <ion-card>
-                <img src="../../assets/animal3.jpg" />
+                <img button="true" routerLink="/chat" src="../../assets/animal3.jpg" />
                 <ion-card-header>
                   <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
                   <ion-card-title>PEPE</ion-card-title>
@@ -90,7 +91,7 @@
 
 
               <ion-card>
-                  <img src="../../assets/animal4.jpg" />
+                  <img button="true" routerLink="/chat" src="../../assets/animal4.jpg" />
                   <ion-card-header>
                     <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
                     <ion-card-title>PEPE</ion-card-title>
@@ -103,7 +104,7 @@
 
 
                 <ion-card>
-                    <img src="../../assets/animal5.jpg" />
+                    <img button="true" routerLink="/chat" src="../../assets/animal5.jpg" />
                     <ion-card-header>
                       <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
                       <ion-card-title>PEPE</ion-card-title>
@@ -117,7 +118,7 @@
 
 
                   <ion-card>
-                      <img src="../../assets/animal7.jpg" />
+                      <img button="true" routerLink="/chat" src="../../assets/animal7.jpg" />
                       <ion-card-header>
                         <ion-card-subtitle>Raza del animal: .......</ion-card-subtitle>
                         <ion-card-title>PEPE</ion-card-title>
@@ -132,9 +133,16 @@
       </ion-app>
 
     </ion-content>
-    <ion-footer>
-        <ion-icon class="icon"  name="add-circle" button="true" routerLink="/animal-form"></ion-icon>
 
-        <ion-icon class="icono"  name="chatbubbles" button="true" routerLink="/chat"></ion-icon>
+
+    <ion-footer>
+     
+       
+       
+         
+        <ion-icon class="icon"  name="add-circle" button="true" routerLink="/animal-form"></ion-icon>
+        <ion-icon class="icono"  name="send" button="true" routerLink="/chat"></ion-icon>
+       
+       
    </ion-footer>
    
