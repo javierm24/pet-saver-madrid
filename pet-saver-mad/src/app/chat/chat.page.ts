@@ -10,11 +10,8 @@ export class ChatPage implements OnInit {
   constructor() { }
 
 
-<<<<<<< HEAD
   ngOnInit() {}
-=======
-  ngOnInit() {
-  }
->>>>>>> ronald_bs
 
 }
+ 
+
