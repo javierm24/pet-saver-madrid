@@ -11,44 +11,51 @@
     <h1>Datos de la mascota</h1>
     <form>
 
+        <ion-card>
+            <img src="../../assets/animal1.jpg" />
+            <ion-button color="primary">Cargar foto</ion-button>
+          </ion-card>
+
       <ion-item>
-        <ion-label>TIPO DE MASCOTA</ion-label>
+        <ion-label>Tipo de mascota</ion-label>
         <ion-select multiple="false">
-          <ion-select-option value="PERROS"> PERRO</ion-select-option>
-          <ion-select-option value="GATOS"> GATO</ion-select-option>
-          <ion-select-option value="OTROS"> OTRO</ion-select-option>
+          <ion-select-option value="PERROS"> Perro</ion-select-option>
+          <ion-select-option value="GATOS"> Gato</ion-select-option>
+          <ion-select-option value="OTROS"> Otro</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label>SEXO</ion-label>
+        <ion-label>Sexo</ion-label>
         <ion-select multiple="false">
-          <ion-select-option value="PERROS"> HEMBRA</ion-select-option>
-          <ion-select-option value="GATOS"> MACHO</ion-select-option>
+          <ion-select-option value="PERROS"> Hembra</ion-select-option>
+          <ion-select-option value="GATOS"> Macho</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">NOMBRE <ion-text color="danger"></ion-text>
+          <ion-label>Tamaño</ion-label>
+          <ion-select multiple="false">
+            <ion-select-option value="PERROS"> Pequeño</ion-select-option>
+            <ion-select-option value="GATOS"> Mediano</ion-select-option>
+            <ion-select-option value="GATOS"> Grande</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nombre <ion-text color="danger"></ion-text>
         </ion-label>
         <ion-input required type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">EDAD <ion-text color="danger"></ion-text>
+        <ion-label position="stacked">Edad <ion-text color="danger"></ion-text>
         </ion-label>
         <ion-input required type="text"></ion-input>
       </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">TAMAÑO <ion-text color="danger"></ion-text>
-        </ion-label>
-        <ion-input required type="text"></ion-input>
-      </ion-item>
-
 
       <div class="ion-padding">
-        <ion-button color="dark" expand="block" type="submit" class="ion-no-margin">ENVIAR</ion-button>
+        <ion-button color="primary" expand="block" type="submit" class="ion-no-margin">ENVIAR</ion-button>
       </div>
     </form>
 
