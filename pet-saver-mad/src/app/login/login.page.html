@@ -13,12 +13,12 @@
           <ion-list>
             <ion-item>
 
-              <ion-label>Email</ion-label>
+              <ion-label position="stacked">Email</ion-label>
               <ion-input type="text" placeholder="Correo"></ion-input>
             </ion-item>
             <ion-item>
               
-              <ion-label>Contraseña:</ion-label>
+              <ion-label position="stacked">Contraseña:</ion-label>
               <ion-input type="password" placeholder="Contraseña"></ion-input>
             </ion-item>
           </ion-list>
@@ -28,3 +28,25 @@
         </form>
     
 </ion-content>
+
+<ion-footer>
+    <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+      <ion-fab-button color="primary">
+        <ion-icon class ="icon" name="arrow-dropright"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="end">
+        <ion-fab-button color="light">
+          <ion-icon class ="icon" name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon class ="icon" name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon class ="icon" name="logo-vimeo"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon class ="icon" name="logo-google"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    </ion-footer>
