@@ -36,13 +36,14 @@
     </ion-header>,
     <ion-content fullscreen padding>
       <ion-label>Filtrar</ion-label>
-      <ion-select multiple="true">
+      <ion-select [(ngModel)]="tipoAnimal" (ngModelChange)="cambiaTipo()">
+        <ion-select-option value="TODOS"> Todos</ion-select-option>
         <ion-select-option value="PERROS"> Perros</ion-select-option>
         <ion-select-option value="GATOS"> Gatos</ion-select-option>
         <ion-select-option value="OTROS"> Otros</ion-select-option>
       </ion-select>
 
-      <ion-card *ngFor="let animal of animales" button="true" (click)="irAChat(animal)">
+      <ion-card *ngFor="let animal of animalesFiltrados" button="true" (click)="irAChat(animal)">
         <img [src]="animal.imagen" />
         <ion-card-header>
           <ion-card-subtitle>{{animal.tipo}}</ion-card-subtitle>

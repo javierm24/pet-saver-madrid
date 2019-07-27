@@ -12,7 +12,9 @@ import { Conversacion } from '../conversacion';
 })
 export class HomePage {
   idUsuario: string = '';
-  animales: Animal[] = [];
+  tipoAnimal: string = '';
+  animalesTodos: Animal[] = [];
+  animalesFiltrados: Animal[] = [];
 
   constructor(private animalService: AnimalService, private chatService: ChatService, private router: Router) {}
 
@@ -33,9 +35,23 @@ export class HomePage {
   getAnimales() {
     this.animalService.getAnimales().subscribe((res: Animal[]) => {
       console.log(res);
-      this.animales = res;
+      this.animalesTodos = [ ...res ];
+      this.animalesFiltrados = [ ...res ];
     }, error => {
       console.log(error);
+    })
+  }
+
+  cambiaTipo() {
+    if (this.tipoAnimal === "TODOS") {
+      this.animalesFiltrados = this.animalesTodos;
+      return;
+    }
+
+    this.animalesFiltrados = this.animalesTodos.filter(animal => {
+      if (animal.tipo === this.tipoAnimal) {
+        return animal;
+      }
     })
   }
 
