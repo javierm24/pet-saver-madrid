@@ -63,7 +63,7 @@ export class HomePage {
   }
 
   irAChat(animal) {
-    const userID_2 = animal.dueno;
+    const userID_2 = animal.dueno._id;
     this.chatService.crearConversacion(
       this.idUsuario, 
       userID_2, 
