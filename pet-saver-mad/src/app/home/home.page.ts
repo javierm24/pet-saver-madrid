@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
-import {animalService} from '../animal-list/animalService';
+import { Animal } from '../animal';
+import { AnimalService } from '../animal.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  dogs;
-  constructor(private AnimalService: animalService) {
-  
-  }
+  animales: Animal[] = [];
+  constructor(private animalService: AnimalService) {}
   ngOnInit() {
-    this.searchAnimal();
+    this.getAnimales();
   }
-  searchAnimal(){
-    this.AnimalService.animals('perro').subscribe(data => {
-      this.dogs = data;
-    });
+
+  getAnimales() {
+    this.animalService.getAnimales().subscribe((res: Animal[]) => {
+      console.log(res);
+      this.animales = res;
+    }, error => {
+      console.log(error);
+    })
   }
 }

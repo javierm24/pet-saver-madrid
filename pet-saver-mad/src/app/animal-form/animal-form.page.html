@@ -14,63 +14,48 @@
     <h1>Datos de la mascota</h1>
     <form>
 
-        <ion-card>
-            <img src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.rawpixel.com%2Fs3fs-private%2Frawpixel_images%2Fwebsite_content%2Fvprojectold-icon-ju-82_1_3.jpg%3Fauto%3Dformat%26bg%3DF4F4F3%26con%3D3%26cs%3Dsrgb%26dpr%3D1%26fm%3Djpg%26ixlib%3Dphp-1.1.0%26mark%3Drawpixel-watermark.png%26markalpha%3D90%26markpad%3D13%26markscale%3D10%26markx%3D25%26q%3D75%26usm%3D15%26vib%3D3%26w%3D1000%26s%3D44fade6d60762d37a70fc0d54e7a8fac" />
-            <ion-button color="primary">Subir foto</ion-button>
-          </ion-card>
+      
 
       <ion-item>
         <ion-label>Tipo de mascota:</ion-label>
-        <ion-select multiple="false">
+        <ion-select name="seleccion"  [(ngModel)] = "animal.tipo" multiple="false">
           <ion-select-option value="PERROS"> Perro</ion-select-option>
           <ion-select-option value="GATOS"> Gato</ion-select-option>
           <ion-select-option value="OTROS"> Otro</ion-select-option>
         </ion-select>
       </ion-item>
-
+    
+      
       <ion-item>
-        <ion-label>Sexo:</ion-label>
-        <ion-select multiple="false">
-          <ion-select-option value="PERROS"> Hembra</ion-select-option>
-          <ion-select-option value="GATOS"> Macho</ion-select-option>
-        </ion-select>
+        <ion-label position="stacked">Subir foto: 
+        </ion-label>
+        <ion-input name="subir"  [(ngModel)] = "animal.imagen" required type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
-          <ion-label>Tamaño:</ion-label>
-          <ion-select multiple="false">
-            <ion-select-option value="PERROS"> Pequeño</ion-select-option>
-            <ion-select-option value="GATOS"> Mediano</ion-select-option>
-            <ion-select-option value="GATOS"> Grande</ion-select-option>
-          </ion-select>
-        </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Nombre: 
         </ion-label>
-        <ion-input required type="text"></ion-input>
+        <ion-input name="nombre"  [(ngModel)] = "animal.nombre" required type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Edad: 
         </ion-label>
-        <ion-input required type="text"></ion-input>
+        <ion-input name="edad"  [(ngModel)] = "animal.edad" required type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
-          <ion-label position="stacked">Raza:
-          </ion-label>
-          <ion-input required type="text"></ion-input>
-        </ion-item>
+    
 
         <ion-item>
             <ion-label position="stacked">Descripcion:
             </ion-label>
-            <ion-textarea placeholder="Detalle de la mascota en adopcion"></ion-textarea>
+            <ion-textarea name="descripcion"  [(ngModel)] = "animal.descripcion" placeholder="Detalle de la mascota en adopcion"></ion-textarea>
           </ion-item>
 
+          <p padding *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
       <div class="ion-padding">
-        <ion-button color="primary" expand="block" type="submit" class="ion-no-margin">Subir</ion-button>
+        <ion-button color="primary" expand="block" type="submit" class="ion-no-margin" (click)="validateAnimal()">Subir</ion-button>
       </div>
     </form>
 

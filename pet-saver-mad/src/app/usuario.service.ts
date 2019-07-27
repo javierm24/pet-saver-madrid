@@ -16,7 +16,15 @@ export class UsuarioService {
       
       usuario: user.usuario,
       contrasena: user.contrasena
-    })
+    }) 
+   
   }
 
+  validateRegistro(user: User) {
+    return this.http.post('http://localhost:3333/usuario/registro', {
+      email: user.email,
+      usuario: user.usuario,
+      contrasena: user.contrasena
+    })
+  }
 }

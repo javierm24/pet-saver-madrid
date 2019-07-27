@@ -17,19 +17,19 @@
         <ion-item>
           <ion-label position="stacked">Usuario: <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input required type="text"></ion-input>
+          <ion-input name="text"  [(ngModel)] = "user.usuario" required type="text"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">Correo: <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input required type="text"></ion-input>
+          <ion-input name="email"  [(ngModel)] = "user.email" required type="text"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">Contraseña: <ion-text color="danger">*</ion-text>
           </ion-label>
-          <ion-input required type="password"></ion-input>
+          <ion-input name="password"  [(ngModel)] = "user.contrasena" required type="password"></ion-input>
         </ion-item>
 
       
@@ -37,9 +37,9 @@
 
 
       </ion-list>
-
+      <p padding *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
       <div class="ion-padding">
-        <ion-button color="primary" expand="block" type="submit" class="ion-no-margin" routerLink="/login/">Registrarse
+        <ion-button color="primary" expand="block" type="submit" class="ion-no-margin"(click)="validateRegistro()">Registrarse
         </ion-button>
       </div>
     </form>

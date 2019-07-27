@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { UsuarioService } from '../usuario.service';
 import { User } from '../user';
-import { HomePage } from '../home/home.page';
 import { Router } from '@angular/router';
 
 
@@ -13,7 +12,6 @@ import { Router } from '@angular/router';
 export class LoginPage {
 
   public user: User;
-  navCtrl: any;
 
   errorMsg: string = '';
 
@@ -27,6 +25,7 @@ export class LoginPage {
       
       this.loginService.validateLogin(this.user).subscribe(result => {
         console.log('result is ', result);
+        localStorage.setItem('idUsuario', result['_id']);
         this.router.navigate(['/home']);
       }, error => {
         console.log('error is ', error);
