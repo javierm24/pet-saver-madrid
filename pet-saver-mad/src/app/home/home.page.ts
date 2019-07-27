@@ -21,6 +21,13 @@ export class HomePage {
   ngOnInit() {
     this.checkearUsuario();
     this.getAnimales();
+    window.scrollTo(0, 0);
+  }
+
+  ionViewWillEnter(){
+    this.checkearUsuario();
+    this.getAnimales();
+    window.scrollTo(0, 0);
   }
 
   checkearUsuario() {
