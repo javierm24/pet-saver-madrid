@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AnimalService } from '../animal.service';
+import { AnimalService } from '../services/animal.service';
 import { Animal } from '../animal';
 
 
@@ -19,6 +19,11 @@ export class AnimalFormPage implements OnInit {
   constructor(private router: Router, private animalservice: AnimalService) {
     this.animal = new Animal();
   }
+
+  ngOnInit() {
+    this.checkearUsuario();
+  }
+
   validateAnimal() {
     this.errorMsg = '';
     if (this.animal.imagen && this.animal.tipo && this.animal.nombre && this.animal.edad && this.animal.descripcion) {
@@ -30,10 +35,6 @@ export class AnimalFormPage implements OnInit {
 
       })
     }
-  }
-
-  ngOnInit() {
-    this.checkearUsuario();
   }
 
   checkearUsuario() {

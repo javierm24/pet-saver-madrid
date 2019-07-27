@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'chat-list', loadChildren: './chat-list/chat-list.module#ChatListPageModule' },
-  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
+  { path: 'chat/:idChat', loadChildren: './chat/chat.module#ChatPageModule' },
   { path: 'animal-form', loadChildren: './animal-form/animal-form.module#AnimalFormPageModule' },
   { path: 'auth', loadChildren: './auth/auth.module#AuthPageModule' },
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Animal } from './animal';
+import { Animal } from '../animal';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

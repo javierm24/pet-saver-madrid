@@ -3,13 +3,24 @@
     <ion-buttons defaultHref="animal-list" slot="start" text="atras">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Chat <ion-icon name="paw"></ion-icon>
+    <ion-title>Chat con {{ conversacion?.nombreAnimal }} <ion-icon name="paw"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div
+    class="chat-burbuja"
+    *ngFor="let mensaje of conversacion?.mensajes">
 
+    <ion-chip class="burbuja-derecha" color="primary" *ngIf="mensaje?.remitente === idUsuario">
+      <ion-label>{{ mensaje?.texto }}</ion-label>
+    </ion-chip>
+
+    <ion-chip color="success" *ngIf="mensaje?.remitente !== idUsuario">
+      <ion-label>{{ mensaje?.texto }}</ion-label>
+    </ion-chip>
+  </div>
 
 </ion-content>
 
@@ -18,10 +29,10 @@
   <ion-grid>
     <ion-row>
       <ion-col size="9">
-        <ion-textarea placeholder="Escribe tu mensaje"> </ion-textarea>
+        <ion-textarea placeholder="Escribe tu mensaje" [(ngModel)]="texto" (keyup.enter)="enviarMensaje()"></ion-textarea>
       </ion-col>
       <ion-col size="3">
-        <ion-button color="primary">Enviar</ion-button>
+        <ion-button color="primary" (click)="enviarMensaje()">Enviar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -42,8 +42,8 @@
         <ion-select-option value="OTROS"> Otros</ion-select-option>
       </ion-select>
 
-      <ion-card *ngFor="let animal of animales">
-        <img button="true" routerLink="/chat" [src]="animal.imagen" />
+      <ion-card *ngFor="let animal of animales" button="true" (click)="irAChat(animal)">
+        <img [src]="animal.imagen" />
         <ion-card-header>
           <ion-card-subtitle>{{animal.tipo}}</ion-card-subtitle>
           <ion-card-title>{{ animal.nombre }}</ion-card-title>
