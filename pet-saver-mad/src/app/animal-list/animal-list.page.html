@@ -16,10 +16,10 @@
 
             <ion-item>
               <ion-label>MASCOTAS</ion-label>
-              <ion-select multiple="true">
-                <ion-select-option value="PERROS"> PERROS</ion-select-option>
-                <ion-select-option value="GATOS"> GATOS</ion-select-option>
-                <ion-select-option value="OTROS"> OTROS</ion-select-option>
+              <ion-select>
+                <ion-select-option (ionChange)='searchAnimal($event)' value="PERROS">PERROS</ion-select-option>
+                <ion-select-option [(ngModule)] = 'animalType' value="GATOS">GATOS</ion-select-option>
+                <ion-select-option [(ngModule)] = 'animalType' value="OTROS">OTROS</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
@@ -28,6 +28,5 @@
     </ion-content>
   </ion-app>
 
-
-
+  <button (click)='searchAnimal()'>psokaf</button>
 </ion-content>

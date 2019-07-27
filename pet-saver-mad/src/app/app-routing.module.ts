@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'chat-list', loadChildren: './chat-list/chat-list.module#ChatListPageModule' },
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
   { path: 'animal-list', loadChildren: './animal-list/animal-list.module#AnimalListPageModule' },
-  { path: 'animal-finder', loadChildren: './animal-finder/animal-finder.module#AnimalFinderPageModule' },
   { path: 'animal-form', loadChildren: './animal-form/animal-form.module#AnimalFormPageModule' },
   { path: 'auth', loadChildren: './auth/auth.module#AuthPageModule' },
 

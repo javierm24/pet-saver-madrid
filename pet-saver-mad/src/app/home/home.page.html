@@ -9,8 +9,8 @@
     </ion-toolbar>
   </ion-header>
   
-<ion-card>
-        
+<ion-card *ngFor="let dog of dogs">
+        {{dog.nombre}}
         <ion-card-content>
           <ion-list>
 

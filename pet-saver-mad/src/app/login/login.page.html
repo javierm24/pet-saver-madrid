@@ -13,17 +13,18 @@
           <ion-list>
             <ion-item>
 
-              <ion-label position="stacked">Email</ion-label>
-              <ion-input type="text" placeholder="Correo"></ion-input>
+              <ion-label position="stacked">Usuario:</ion-label>
+              <ion-input name="text" [(ngModel)] = "user.usuario" type="text" placeholder="Correo"></ion-input>
             </ion-item>
             <ion-item>
               
-              <ion-label position="stacked">Contraseña:</ion-label>
-              <ion-input type="password" placeholder="Contraseña"></ion-input>
+              <ion-label position="stacked">Contrasena:</ion-label>
+              <ion-input name="password" [(ngModel)] = "user.contrasena" type="password" placeholder="Contraseña"></ion-input>
             </ion-item>
           </ion-list>
+          <p padding *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
           <div padding>
-              <ion-button color="primary" routerLink="/home/">Ingresar</ion-button>
+              <ion-button color="primary" (click)="validateLogin()">Ingresar</ion-button>
           </div>
         </form>
     
