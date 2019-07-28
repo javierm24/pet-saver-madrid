@@ -32,7 +32,7 @@ export class LoginPage {
         this.errorMsg = 'Usuario no autorizado.';
       });
     } else {
-      alert('enter user name and password');
+      alert('Ingresa usuario y contraseña');
     }
   }
 

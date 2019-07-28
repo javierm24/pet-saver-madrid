@@ -23,6 +23,8 @@
             </ion-item>
           </ion-list>
           <p padding *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
+          <a padding *ngIf="errorMsg" button="true" routerLink="/registro"><u>Registrarse</u></a>
+
           <div padding>
               <ion-button class="ion-no-margin" expand="block" color="primary" (click)="validateLogin()">Ingresar</ion-button>
           </div>
