@@ -19,14 +19,14 @@
             <ion-item>
               
               <ion-label position="stacked">Contrasena:</ion-label>
-              <ion-input name="password" [(ngModel)] = "user.contrasena" type="password" placeholder="Contraseña"></ion-input>
+              <ion-input (keyup.enter)="validateLogin()" name="password" [(ngModel)] = "user.contrasena" type="password" placeholder="Contraseña"></ion-input>
             </ion-item>
           </ion-list>
           <p padding *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
           <a padding *ngIf="errorMsg" button="true" routerLink="/registro"><u>Registrarse</u></a>
 
           <div padding>
-              <ion-button class="ion-no-margin" expand="block" color="primary" (click)="validateLogin()">Ingresar</ion-button>
+              <ion-button class="ion-no-margin" expand="block" color="primary"  (click)="validateLogin()">Ingresar</ion-button>
           </div>
         </form>
     
